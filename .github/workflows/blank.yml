@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>IMDB Top Movie List</title>
+  <style>
+    body {
+      background-color: #f5f5f5;
+    }
+    .heading {
+      background-color: #964B00;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      font-size: 36px;
+      font-weight: bold;
+    }
+    table {
+      border-collapse: collapse;
+      width: 80%;
+      margin: 40px auto;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+  <div class="heading">Hands-on Project 3-3</div>
+  <h1>I M D B Top Movie List</h1>
+  <table>
+    <tr>
+      <th>Movie Title</th>
+      <th>Description</th>
+      <th>Score</th>
+    </tr>
+    <!-- Loop through the movie information and add rows to the table -->
+    <?php
+      $movies = array(
+        array("The Shawshank Redemption", "A wrongfully convicted man is sent to prison, where he befriends a fellow inmate who helps him maintain his hope and find redemption.", "9.2"),
+        array("The Godfather", "The aging patriarch of an organized crime family decides to go into retirement, but is forced back in action by a power struggle from within the family.", "9.2"),
+        array("The Dark Knight", "When the Joker wreaks havoc on Gotham City, Batman must face his greatest challenge to date.", "8.6"),
+        array("12 Angry Men", "A jury of twelve men must decide the fate of a young man accused of murder.", "9.0"),
+        array("Schindler's List", "A German businessman befriends his Jewish employees and saves them from the Nazi extermination camps during World War II.", "8.8"),
+        array("The Lord of the Rings: The Return of the King", "Frodo and Sam continue their journey to destroy the One Ring and save Middle-earth from the Dark Lord Sauron.", "8.9"),
+        array("Pulp Fiction", "The lives of two mob hitmen, a boxer, and a pair of diner bandits intertwine in this non-linear story of crime and redemption.", "8.8"),
+        array("The Silence of the Lambs", "An FBI trainee is sent to interview a imprisoned serial killer to gain insight into her mind, only to find that he is more cunning than she anticipated.", "8.6"),
+        array("Forrest Gump", "A man with a low IQ runs across the country and becomes a successful businessman, while narrating his life story to strangers.", "8.8"),
+        array("Inception", "A thief who steals corporate secrets through dream-sharing technology is given the inverse task of planting an idea instead.", "8.6")
+      );
+      
+      foreach ($movies as $movie) {
+        echo '<tr>';
+        echo '<td>' . $movie[0] . '</td>';
+        echo '<td>' . $movie[1] . '</td>';
+        echo '<td>' . $movie[2] . '</td>';
+        echo '</tr>';
+      }
+    ?>
+  </table>
+</body>
+</html>
